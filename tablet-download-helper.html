@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiqma - Download for Tablets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .device-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .device-info h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .device-info p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .download-section {
+            margin-top: 30px;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .download-btn.secondary {
+            background: #6c757d;
+            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+        }
+        
+        .download-btn.secondary:hover {
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.5);
+        }
+        
+        .size-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        
+        .all-downloads {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+        }
+        
+        .all-downloads h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .download-list {
+            list-style: none;
+        }
+        
+        .download-list li {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .download-list li strong {
+            color: #333;
+        }
+        
+        .download-list li span {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .emoji {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Download Hiqma</h1>
+        <p class="subtitle">Optimized for your tablet</p>
+        
+        <div class="device-info" id="deviceInfo">
+            <h3>🔍 Detecting your device...</h3>
+            <p id="deviceDetails">Please wait...</p>
+        </div>
+        
+        <div class="download-section" id="downloadSection">
+            <!-- Recommended download will be inserted here -->
+        </div>
+        
+        <div class="all-downloads">
+            <h3>All Available Downloads</h3>
+            <ul class="download-list">
+                <li>
+                    <div>
+                        <span class="emoji">🔥</span>
+                        <strong>Modern ARM Tablets</strong>
+                        <br>
+                        <span>Samsung, Lenovo, Xiaomi, OnePlus</span>
+                    </div>
+                    <a href="app-arm64-v8a-release.apk" class="download-btn" style="width: auto; padding: 10px 20px; margin: 0;">
+                        Download <span class="size-badge">~40 MB</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <span class="emoji">💻</span>
+                        <strong>Intel Chromebooks</strong>
+                        <br>
+                        <span>HP, Acer, Lenovo Chromebooks</span>
+                    </div>
+                    <a href="app-x86_64-release.apk" class="download-btn" style="width: auto; padding: 10px 20px; margin: 0;">
+                        Download <span class="size-badge">~45 MB</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <span class="emoji">📱</span>
+                        <strong>Older ARM Tablets</strong>
+                        <br>
+                        <span>Amazon Fire, older Samsung</span>
+                    </div>
+                    <a href="app-armeabi-v7a-release.apk" class="download-btn" style="width: auto; padding: 10px 20px; margin: 0;">
+                        Download <span class="size-badge">~35 MB</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <span class="emoji">🖥️</span>
+                        <strong>Older Intel Tablets</strong>
+                        <br>
+                        <span>Older Chromebooks, Intel tablets</span>
+                    </div>
+                    <a href="app-x86-release.apk" class="download-btn" style="width: auto; padding: 10px 20px; margin: 0;">
+                        Download <span class="size-badge">~40 MB</span>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <span class="emoji">🌐</span>
+                        <strong>Universal (All Tablets)</strong>
+                        <br>
+                        <span>Works on any tablet - larger file</span>
+                    </div>
+                    <a href="app-release.apk" class="download-btn secondary" style="width: auto; padding: 10px 20px; margin: 0;">
+                        Download <span class="size-badge">~110 MB</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Simple device detection
+        function detectDevice() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const platform = navigator.platform.toLowerCase();
+            
+            let deviceType = 'unknown';
+            let recommendation = '';
+            let apkFile = 'app-release.apk';
+            let size = '~110 MB';
+            
+            // Check for Chromebook
+            if (userAgent.includes('cros')) {
+                deviceType = 'chromebook';
+                recommendation = 'Intel Chromebook detected! We recommend the x86_64 version for best performance.';
+                apkFile = 'app-x86_64-release.apk';
+                size = '~45 MB';
+            }
+            // Check for Android
+            else if (userAgent.includes('android')) {
+                // Try to detect architecture (limited on web)
+                if (userAgent.includes('arm64') || userAgent.includes('aarch64')) {
+                    deviceType = 'modern-arm';
+                    recommendation = 'Modern ARM tablet detected! We recommend the arm64-v8a version.';
+                    apkFile = 'app-arm64-v8a-release.apk';
+                    size = '~40 MB';
+                } else if (userAgent.includes('arm')) {
+                    deviceType = 'older-arm';
+                    recommendation = 'ARM tablet detected! We recommend the armeabi-v7a version.';
+                    apkFile = 'app-armeabi-v7a-release.apk';
+                    size = '~35 MB';
+                } else if (userAgent.includes('x86_64') || userAgent.includes('x86-64')) {
+                    deviceType = 'intel-64';
+                    recommendation = 'Intel tablet detected! We recommend the x86_64 version.';
+                    apkFile = 'app-x86_64-release.apk';
+                    size = '~45 MB';
+                } else if (userAgent.includes('x86')) {
+                    deviceType = 'intel-32';
+                    recommendation = 'Intel tablet detected! We recommend the x86 version.';
+                    apkFile = 'app-x86-release.apk';
+                    size = '~40 MB';
+                } else {
+                    deviceType = 'android-unknown';
+                    recommendation = 'Android tablet detected! We recommend the universal version for compatibility.';
+                    apkFile = 'app-release.apk';
+                    size = '~110 MB';
+                }
+            }
+            // Desktop browser
+            else {
+                deviceType = 'desktop';
+                recommendation = 'Browsing from a computer? Download the universal version to transfer to your tablet.';
+                apkFile = 'app-release.apk';
+                size = '~110 MB';
+            }
+            
+            return { deviceType, recommendation, apkFile, size };
+        }
+        
+        // Update UI with detection results
+        function updateUI() {
+            const detection = detectDevice();
+            
+            document.getElementById('deviceInfo').innerHTML = `
+                <h3>✅ Device Detected</h3>
+                <p>${detection.recommendation}</p>
+            `;
+            
+            let downloadHTML = `
+                <a href="${detection.apkFile}" class="download-btn">
+                    <span class="emoji">⬇️</span> Download Recommended Version
+                    <span class="size-badge">${detection.size}</span>
+                </a>
+            `;
+            
+            // Add universal as backup
+            if (detection.apkFile !== 'app-release.apk') {
+                downloadHTML += `
+                    <a href="app-release.apk" class="download-btn secondary">
+                        <span class="emoji">🌐</span> Download Universal Version
+                        <span class="size-badge">~110 MB</span>
+                    </a>
+                `;
+            }
+            
+            document.getElementById('downloadSection').innerHTML = downloadHTML;
+        }
+        
+        // Run detection on page load
+        updateUI();
+    </script>
+</body>
+</html>
